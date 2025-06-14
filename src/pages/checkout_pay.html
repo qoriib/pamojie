@@ -1,0 +1,383 @@
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Checkout | Pamoijie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/styles/main.css">
+  </head>
+  <body class="bg-grey-2 font-ubuntu">
+
+    <!-- BEGIN: Header -->
+    <div class="bg-white py-5">
+      <header class="container mx-auto">
+        <div class="flex items-center justify-between py-4 px-6 space-x-4 bg-grey-2 rounded-2xl">
+          <div class="flex-shrink-0">
+            <img src="/logo.png" alt="Logo" class="h-16 w-auto">
+          </div>
+          <div class="flex-grow relative overflow-hidden bg-white border border-grey-1 rounded-xl shadow-sm">
+            <select class="px-4 py-3 mr-3 text-grey-1 focus:outline-none focus:shadow-outline cursor-pointer">
+              <option>Semua Kategori</option>
+              <option>Kategori 1</option>
+              <option>Kategori 2</option>
+            </select>
+            <input type="text" class="appearance-none px-4 py-1 my-2 border-l border-grey-1 text-grey-1 focus:outline-none focus:shadow-outline" placeholder="Cari...">
+            <a href="/product_list_dayak.html" class="absolute top-0 right-0 h-10 w-10 p-2.5 bg-dark rounded-lg m-1">
+              <img class="inline-block" src="/icons-sm/Search.png" alt="Search Icon">
+            </a>
+          </div>
+          <div class="flex items-center space-x-4 ml-4">
+            <a href="/index_profile_notification.html" class="text-grey-1">
+              <img class="inline-block h-6 w-6 mr-1" src="/icons-sm/Notification.png" alt="Notification Icon">
+              <span class="inline">Notifikasi</span>
+            </a>
+            <a href="/cart.html" class="text-grey-1">
+              <img class="inline-block h-6 w-6 mr-1" src="/icons-sm/Cart.png" alt="Cart Icon">
+              <span class="inline">Keranjang</span>
+            </a>
+            <a href="/profile.html" class="bg-dark text-white py-3 px-3 rounded-xl">
+              <img class="inline-block h-6 w-6 mr-1" src="/icons-sm/User.png" alt="User Icon">
+              <span class="inline">Profil</span>
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- END: Header -->
+
+    <main class="flex flex-col space-y-5 py-5">
+
+      <!-- BEGIN: Checkout -->
+      <div class="container mx-auto py-5">
+        <div class="flex items-center mb-5">
+          <a href="/index_profile.html" class="px-3 py-2 flex items-center justify-center text-black text-xl">
+            <i class="fa fa-arrow-left"></i>
+          </a>
+          <div>
+            <h2 class="text-xl font-regular text-grey-1"><span class="text-dark">Transaksi</span> / Keranjang / Selesaikan Pembelian</h2>
+          </div>
+        </div>
+        <div class="relative mb-5">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-grey-1"></div>
+          </div>
+          <div class="relative flex items-center justify-between text-sm">
+            <h2 class="text-2xl pr-4 font-semibold bg-grey-2 text-black">Selesaikan Pembelian</h2>
+          </div>
+        </div>
+        <div class="flex gap-4">
+          <div class="w-3/4 space-y-4">
+            <div class="bg-white rounded-xl shadow-md p-4">
+              <div class="flex gap-3 mb-3">
+                <label class="flex flex-1 items-center gap-2 border border-grey-1 rounded-md py-2 px-3 text-sm font-bold text-black">
+                  <input type="radio" class="peer hidden" name="transactionType" checked>
+                  <div class="w-5 h-5 rounded-full text-transparent text-xs border-2 border-grey-1 flex items-center justify-center peer-checked:bg-green peer-checked:text-white transition"></div>
+                  <span class="text-md text-grey-1 font-regular">Diantar ke Alamat</span>
+                </label>
+                <label class="flex flex-1 items-center gap-2 border border-grey-1 rounded-md y-2 px-3 text-sm font-bold text-black">
+                  <input type="radio" class="peer hidden" name="transactionType">
+                  <div class="w-5 h-5 rounded-full text-transparent text-xs border-2 border-grey-1 flex items-center justify-center peer-checked:bg-green peer-checked:text-white transition"></div>
+                  <span class="text-md text-grey-1 font-regular">Ambil di Tempat</span>
+                </label>
+              </div>
+              <div class="flex items-center py-2 px-3 border border-grey-1 rounded-md">
+                <div class="flex-1">
+                  <h3 class="text-lg font-bold text-black mb-2">Alamat Pengiriman</h3>
+                  <div class="flex justify-between items-start">
+                    <div class="flex items-center gap-2 text-md text-grey-1">
+                      <i class="fa fa-map-marker-alt text-dark"></i>
+                      <p>Jl. Tugu No.1, Kiduldalem, Kec. Klojen, Kota Malang, Jawa Timur 65119</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="bg-grey-2 text-black px-4 py-2 rounded-md text-md">Ganti Alamat</button>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+              <table class="w-full table-auto text-body3 text-black">
+                <thead class="bg-white border-b border-grey-1 font-bold">
+                  <tr>
+                    <th class="text-left px-4 py-3">Produk</th>
+                    <th class="text-center px-4 py-3">Jumlah</th>
+                    <th class="text-center px-4 py-3">Harga</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-t border-grey-1">
+                    <td class="flex items-center gap-4 px-4 py-3">
+                      <img src="/cart/dayak.png" alt="Kostum Adat Dayak Anak" class="w-14 rounded-md object-cover" />
+                      <span class="font-medium text-black">Kostum Adat Dayak Anak</span>
+                    </td>
+                    <td class="text-center px-4 py-3">1 x</td>
+                    <td class="text-center px-4 py-3 font-semibold text-dark">Rp 35.000,00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+              <table class="w-full table-auto text-body3 text-black">
+                <thead class="text-left font-bold">
+                  <tr>
+                    <th class="px-4 py-3">Catatan Tambahan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-t border-grey-1">
+                    <td class="px-4 py-3">
+                      <input type="text" placeholder="Masukan Catatan" class="w-full border bg-grey-2 border-grey-1 rounded-md p-2 text-md focus:outline-none" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden">
+              <table class="w-full table-auto text-body3 text-black">
+                <thead class="text-left font-bold">
+                  <tr>
+                    <th class="px-4 py-3">Tanggal Pengambilan <span class="text-red">*</span></th>
+                    <th class="px-4 py-3">Tanggal Pengembalian <span class="text-red">*</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-t border-grey-1">
+                    <td class="px-4 py-3">
+                      <input type="date" placeholder="Masukan Tanggal" class="w-full border bg-grey-2 border-grey-1 rounded-md p-2 text-md focus:outline-none" />
+                    </td>
+                    <td class="px-4 py-3">
+                      <input type="date" placeholder="Masukan Tanggal" class="w-full border bg-grey-2 border-grey-1 rounded-md p-2 text-md focus:outline-none" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden w-1/2">
+              <table class="w-full table-auto text-body3 text-black">
+                <thead class="text-left font-bold">
+                  <tr>
+                    <th class="px-4 py-3">Upload KTP <span class="text-red">*</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-t border-grey-1">
+                    <td class="px-4 py-3">
+                      <div class="flex flex-col justify-center items-center gap-3 bg-grey-2 border-4 border-dashed p-5 text-center rounded-2xl h-[15rem]">
+                        <i class="far fa-image text-2xl text-black"></i>
+                        <p class="text-grey-1">Upload KTP untuk jaminan<br>penyewaan</p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="w-1/4 bg-white p-6 rounded-xl shadow space-y-4 h-fit">
+            <h4 class="text-lg font-bold text-black">Ringkasan Pesanan</h4>
+            <div class="text-sm space-y-1">
+              <div class="flex justify-between">
+                <span class="text-black font-regular">Total Belanja</span>
+                <span class="text-black font-semibold">Rp 35.000,00</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-black font-regular">Biaya Pengiriman</span>
+                <span class="text-black font-semibold">Rp 1.000,00</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-black font-regular">Biaya Layanan</span>
+                <span class="text-black font-semibold">Rp 1.000,00</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-black font-regular">Biaya Jaminan</span>
+                <span class="text-black font-semibold">Rp 35.000,00</span>
+              </div>
+            </div>
+            <hr />
+            <div class="flex items-center justify-between">
+              <span class="text-black font-regular">Total</span>
+              <span class="text-lg font-bold text-dark">Rp 72.000,00</span>
+            </div>
+            <hr />
+            <div class="text-body4 text-grey-1 leading-snug">
+              <h5 class="text-black text-h6 mb-2">Informasi</h5>
+              <p class="text-justify text-grey-1">Pengembalian pakaian tidak boleh lebih dari tanggal yang tertera, Denda berlaku jika melebihi batas waktu sewa dan akan dikurangi 5k per hari dari uang jaminan. Uang jaminan akan dikembalikan jika tidak ada denda.</p>
+            </div>
+            <hr>
+            <a href="/checkout_pay.html" class="inline-block w-full bg-dark text-white text-center py-2 px-4 rounded-lg text-body3 hover:opacity-90">
+              Pembayaran
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- END: Checkout -->
+
+      <!-- BEGIN: Recent Products -->
+      <div class="container mx-auto py-5">
+        <div class="relative mb-5">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-grey-1"></div>
+          </div>
+          <div class="relative flex items-center justify-between text-sm">
+            <h2 class="text-2xl pr-4 font-semibold bg-grey-2 text-black">Terakhir Dilihat</h2>
+          </div>
+        </div>
+        <div class="grid grid-cols-4 gap-4">
+          <div class="bg-white rounded-xl shadow-md overflow-hidden relative">
+            <img src="/product/dayak.png" alt="Kostum Adat Dayak" class="w-full object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Dayak</h3>
+              <p class="text-xs text-grey-1">Rp 50.000,00</p>
+            </div>
+            <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+              5.0 <i class="fa fa-star text-yellow"></i>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-md overflow-hidden relative">
+            <img src="/product/padang.png" alt="Kostum Adat Padang" class="w-full object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Padang</h3>
+              <p class="text-xs text-grey-1">Rp 60.000,00</p>
+            </div>
+            <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+              4.0 <i class="fa fa-star text-yellow"></i>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-md overflow-hidden relative">
+            <img src="/product/jawa.png" alt="Kostum Adat Jawa Solo" class="w-full object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Jawa Solo</h3>
+              <p class="text-xs text-grey-1">Rp 40.000,00</p>
+            </div>
+            <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+              5.0 <i class="fa fa-star text-yellow"></i>
+            </div>
+          </div>
+          <div class="bg-white rounded-xl shadow-md overflow-hidden relative">
+            <img src="/product/bali.png" alt="Kostum Adat Bali" class="w-full object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Bali</h3>
+              <p class="text-xs text-grey-1">Rp 80.000,00</p>
+            </div>
+            <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+              5.0 <i class="fa fa-star text-yellow"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END: Recent Products -->
+
+    </main>
+
+    <!-- BEGIN: Modal Box -->
+    <div class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+      <div class="bg-white rounded-2xl shadow-xl w-[32rem] p-6 space-y-6">
+        <h2 class="text-lg font-semibold text-black">Pembayaran</h2>
+        <div class="flex gap-3 mb-3">
+          <label class="flex flex-1 items-center gap-2 border border-grey-1 rounded-md py-2 px-3 text-sm font-bold text-black">
+            <input type="radio" class="peer hidden" name="transactionMethod">
+            <div class="w-5 h-5 rounded-full text-transparent text-xs border-2 border-grey-1 flex items-center justify-center peer-checked:bg-green peer-checked:text-white transition"></div>
+            <span class="text-md text-grey-1 font-regular">Debit / Credit</span>
+          </label>
+          <label class="flex flex-1 items-center gap-2 border border-grey-1 rounded-md y-2 px-3 text-sm font-bold text-black">
+            <input type="radio" class="peer hidden" name="transactionMethod">
+            <div class="w-5 h-5 rounded-full text-transparent text-xs border-2 border-grey-1 flex items-center justify-center peer-checked:bg-green peer-checked:text-white transition"></div>
+            <span class="text-md text-grey-1 font-regular">COD / Cash</span>
+          </label>
+        </div>
+        <div class="space-y-4">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" class="h-5">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="MasterCard" class="h-8">
+        </div>
+        <div class="space-y-3">
+          <div class="flex flex-col space-y-2">
+            <label for="name" class="block text-sm font-medium text-black">Nama Kartu</label>
+            <input type="text" id="name" class="block py-2 px-4 w-full bg-grey-2 border border-grey-1 rounded-md shadow-sm focus:outline-none" placeholder="Name">
+          </div>
+          <div class="flex flex-col space-y-2">
+            <label for="num" class="block text-sm font-medium text-black">Nomor Kartu</label>
+            <input type="text" id="num" class="block py-2 px-4 w-full bg-grey-2 border border-grey-1 rounded-md shadow-sm focus:outline-none" placeholder="xxxx - xxxx - xxxx - xxxx">
+          </div>
+          <div class="flex space-x-3">
+            <div class="flex flex-col space-y-2 w-1/2">
+              <label for="exp" class="block text-sm font-medium text-black">Expired Date</label>
+              <input type="text" id="exp" class="block py-2 px-4 w-full bg-grey-2 border border-grey-1 rounded-md shadow-sm focus:outline-none" placeholder="MM/YY">
+            </div>
+            <div class="flex flex-col space-y-2 w-1/2">
+              <label for="exp" class="block text-sm font-medium text-black">CVV</label>
+              <input type="text" id="exp" class="block py-2 px-4 w-full bg-grey-2 border border-grey-1 rounded-md shadow-sm focus:outline-none" placeholder="xxx">
+            </div>
+          </div>
+        </div>
+        <div class="border-y py-3 space-y-1 text-sm text-black">
+          <div class="flex justify-between">
+            <span>Total Belanja</span>
+            <span class="font-semibold">Rp 35.000,00</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Biaya Pengiriman</span>
+            <span class="font-semibold">Rp 1.000,00</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Biaya Layanan</span>
+            <span class="font-semibold">Rp 1.000,00</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Biaya Jaminan</span>
+            <span class="font-semibold">Rp 35.000,00</span>
+          </div>
+        </div>
+        <div class="flex justify-between text-md text-black">
+          <span>Total</span>
+          <span class="text-dark text-lg font-semibold">Rp 72.000,00</span>
+        </div>
+        <a href="/checkout_completed.html" class="block w-full bg-dark text-white py-2 px-4 text-center rounded-md text-md">
+          Bayar Sekarang
+        </a>
+      </div>
+    </div>
+    <!-- END: Modal Box -->
+
+    <!-- BEGIN: Footer -->
+    <footer class="bg-white py-12">
+      <div class="container mx-auto grid grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="h-1/2 rounded-full overflow-hidden">
+              <img src="/logo.png" alt="Logo Pamoijie" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <p class="text-sm text-grey-1 leading-relaxed">Sewa baju adat dari berbagai daerah di Indonesia untuk acara spesial Anda! Tersedia untuk pernikahan, festival, pentas seni, dan lainnya. Kami menyediakan pakaian berkualitas dengan desain autentik.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Perusahaan</h4>
+          <ul class="text-sm text-black space-y-2">
+            <li><a href="/about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Bantuan</h4>
+          <ul class="text-sm text-black space-y-2">
+            <li><a href="/contact.html">Hubungi kami</a></li>
+            <li><a href="/about.html">Cara Sewa</a></li>
+            <li><a href="/index_profile.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Hubungi Kami</h4>
+          <p class="text-sm text-black"><i class="fas fa-phone-alt mr-2"></i>+62 822-2878-0540</p>
+          <h4 class="text-sm font-semibold text-grey-1 mt-4 mb-2">Sosial Media</h4>
+          <p class="text-sm text-black"><i class="fab fa-instagram mr-2"></i>@pamoijie_artcollection</p>
+        </div>
+      </div>
+      <div class="container flex justify-end items-center mx-auto py-3 px-5 mt-5 bg-dark text-white text-xs rounded-lg">
+        <div class="flex space-x-3">
+          <a href="/terms.html">Syarat & Ketentuan</a>
+          <a href="/terms.html">Kebijakan Privasi</a>
+        </div>
+      </div>
+    </footer>
+    <!-- END: Footer -->
+
+  </body>
+</html>

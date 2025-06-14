@@ -1,0 +1,128 @@
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Profil | Pamoijie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/styles/main.css">
+  </head>
+  <body class="bg-grey-2 font-ubuntu">
+
+    <div class="bg-white py-5">
+      <div class="container mx-auto">
+        <div class="flex items-start justify-between">
+          <a href="/profile_address_list.html" class="px-3 py-2 flex items-center justify-center text-black">
+            <i class="fa fa-arrow-left"></i>
+          </a>
+          <div>
+            <h2 class="text-lg font-semibold text-dark mb-1">Alamat Baru</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- START: Address -->
+    <div class="container bg-white mx-auto my-3 p-5">
+      <div class="flex flex-col space-y-4">
+        <div class="flex flex-col w-1/2 space-y-2">
+          <label for="province" class="block text-sm font-medium text-black">Provinsi <span class="text-red">*</span></label>
+          <input type="text" id="province" class="block py-2 px-4 w-full border border-grey-1 rounded-md shadow-sm focus:outline-none" placeholder="Jawa Timur">
+        </div>
+        <div class="flex flex-col w-1/2 space-y-2">
+          <label for="city" class="block text-sm font-medium text-black">Kota/Kabupaten <span class="text-red">*</span></label>
+          <input type="text" id="city" class="block py-2 px-4 w-full border border-grey-1 rounded-md shadow-sm focus:outline-none" placeholder="Bondowoso">
+        </div>
+        <div class="flex flex-col w-1/4 space-y-2">
+          <label for="district" class="block text-sm font-medium text-black">Kecamatan <span class="text-red">*</span></label>
+          <select type="text" id="district" class="block py-2 px-4 w-full border border-grey-1 rounded-md shadow-sm focus:outline-none">
+            <option value="Kecamatan1">Kecamatan 1</option>
+            <option value="Kecamatan2">Kecamatan 2</option>
+          </select>
+        </div>
+        <div class="flex flex-col w-1/2 space-y-2">
+          <label for="address" class="block text-sm font-medium text-black">Nama Jalan, Gedung, No. Rumah <span class="text-red">*</span></label>
+          <textarea id="address" class="block py-2 px-4 w-full border border-grey-1 rounded-md shadow-sm focus:outline-none" placeholder="Masukkan alamat anda"></textarea>
+        </div>
+        <div class="flex flex-col w-1/2 space-y-2">
+          <label for="address-detail" class="block text-sm font-medium text-black">Detail Lainnya (CTh: Blok / Unit No., Patokan) <span class="text-red">*</span></label>
+          <textarea id="address-detail" class="block py-2 px-4 w-full border border-grey-1 rounded-md shadow-sm focus:outline-none" placeholder="Masukkan detail alamat anda"></textarea>
+        </div>
+        <div class="flex flex-col w-1/2 space-y-2">
+          <label for="zip" class="block text-sm font-medium text-black">Kode Pos</label>
+          <input id="zip" class="block py-2 px-4 w-full border border-grey-1 rounded-md shadow-sm focus:outline-none" placeholder="Masukkan kode pos">
+        </div>
+        <div class="flex flex-col w-1/2 space-y-2">
+          <label for="address-detail" class="block text-sm font-medium text-black">Lokasi</label>
+          <div class="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31639.94328523726!2d110.8382322!3d-7.6178886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a1779ef90e199%3A0x4d3f63aa171b6ab1!2sHERMAN%20KACA!5e0!3m2!1sen!2sid!4v1718269465683!5m2!1sen!2sid" 
+              width="100%" 
+              height="300" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              class="w-full h-[300px] border-0"
+            ></iframe>
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <p>Atur Sebagai Alamat Utama</p>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" value="" class="sr-only peer" checked>
+            <div class="w-14 h-7 bg-teal-700 rounded-full peer peer-checked:after:translate-x-7 after:content-[''] after:absolute after:left-0.5 after:top-0.5 after:bg-white after:border after:rounded-full after:h-6 after:w-6 after:transition-all after:duration-300 peer-checked:bg-teal-700"></div>
+            <span class="absolute left-2 text-white text-xs font-medium pointer-events-none">On</span>
+          </label>
+        </div>
+        <div class="flex justify-center">
+          <a href="/profile_address_list_new.html" class="block w-[20rem] font-medium text-base rounded-md py-2 px-4 bg-dark text-white text-center focus:outline-none focus:shadow-outline">Simpan alamat Baru</a>
+        </div>
+      </div>
+    </div>
+    <!-- END: Address -->
+
+    <!-- BEGIN: Footer -->
+    <footer class="bg-white py-12">
+      <div class="container mx-auto grid grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="h-1/2 rounded-full overflow-hidden">
+              <img src="/logo.png" alt="Logo Pamoijie" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <p class="text-sm text-grey-1 leading-relaxed">Sewa baju adat dari berbagai daerah di Indonesia untuk acara spesial Anda! Tersedia untuk pernikahan, festival, pentas seni, dan lainnya. Kami menyediakan pakaian berkualitas dengan desain autentik.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Perusahaan</h4>
+          <ul class="text-sm text-black space-y-2">
+            <li><a href="/about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Bantuan</h4>
+          <ul class="text-sm text-black space-y-2">
+            <li><a href="/contact.html">Hubungi kami</a></li>
+            <li><a href="/about.html">Cara Sewa</a></li>
+            <li><a href="/index_profile.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Hubungi Kami</h4>
+          <p class="text-sm text-black"><i class="fas fa-phone-alt mr-2"></i>+62 822-2878-0540</p>
+          <h4 class="text-sm font-semibold text-grey-1 mt-4 mb-2">Sosial Media</h4>
+          <p class="text-sm text-black"><i class="fab fa-instagram mr-2"></i>@pamoijie_artcollection</p>
+        </div>
+      </div>
+      <div class="container flex justify-end items-center mx-auto py-3 px-5 mt-5 bg-dark text-white text-xs rounded-lg">
+        <div class="flex space-x-3">
+          <a href="/terms.html">Syarat & Ketentuan</a>
+          <a href="/terms.html">Kebijakan Privasi</a>
+        </div>
+      </div>
+    </footer>
+    <!-- END: Footer -->
+
+  </body>
+</html>

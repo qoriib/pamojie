@@ -1,0 +1,363 @@
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Product Detail | Pamoijie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/styles/main.css">
+  </head>
+  <body class="bg-grey-2 font-ubuntu">
+
+    <!-- BEGIN: Header -->
+    <div class="bg-white py-5">
+      <header class="container mx-auto">
+        <div class="flex items-center justify-between py-4 px-6 space-x-4 bg-grey-2 rounded-2xl">
+          <div class="flex-shrink-0">
+            <img src="/logo.png" alt="Logo" class="h-16 w-auto">
+          </div>
+          <div class="flex-grow relative overflow-hidden bg-white border border-grey-1 rounded-xl shadow-sm">
+            <select class="px-4 py-3 mr-3 text-grey-1 focus:outline-none focus:shadow-outline cursor-pointer">
+              <option>Semua Kategori</option>
+              <option>Kategori 1</option>
+              <option>Kategori 2</option>
+            </select>
+            <input type="text" class="appearance-none px-4 py-1 my-2 border-l border-grey-1 text-grey-1 focus:outline-none focus:shadow-outline" placeholder="Cari...">
+            <a href="/product_list_dayak.html" class="absolute top-0 right-0 h-10 w-10 p-2.5 bg-dark rounded-lg m-1">
+              <img class="inline-block" src="/icons-sm/Search.png" alt="Search Icon">
+            </a>
+          </div>
+          <div class="flex items-center space-x-4 ml-4">
+            <a href="/index_profile_notification.html" class="text-grey-1">
+              <img class="inline-block h-6 w-6 mr-1" src="/icons-sm/Notification.png" alt="Notification Icon">
+              <span class="inline">Notifikasi</span>
+            </a>
+            <a href="/cart.html" class="text-grey-1">
+              <img class="inline-block h-6 w-6 mr-1" src="/icons-sm/Cart.png" alt="Cart Icon">
+              <span class="inline">Keranjang</span>
+            </a>
+            <a href="/profile.html" class="bg-dark text-white py-3 px-3 rounded-xl">
+              <img class="inline-block h-6 w-6 mr-1" src="/icons-sm/User.png" alt="User Icon">
+              <span class="inline">Profil</span>
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- END: Header -->
+
+    <div class="py-3">
+      <div class="flex gap-3 items-center container mx-auto">
+        <a href="/index_profile.html" class="py-2">
+          <i class="fa fa-arrow-left"></i>
+        </a>
+        <h4 class="text-grey-1 text-lg font-reguler">Adat</h4>
+      </div>
+    </div>
+    <main class="flex flex-col bg-white space-y-5 py-5">
+
+      <!-- BEGIN: Product List -->
+      <div class="container mx-auto flex py-5">
+        <aside class="w-1/4 pr-6">
+          <h2 class="text-h4 font-bold text-black mb-4">Filter</h2>
+          <div class="mb-6">
+            <h3 class="text-lg font-regular text-black mb-2">Kategori</h3>
+            <form class="flex flex-col gap-2 text-body3">
+              <label class="flex items-center cursor-pointer gap-2">
+                <input type="checkbox" class="peer hidden">
+                <div class="w-5 h-5 rounded text-transparent text-xs border-2 border-grey-1 flex items-center justify-center peer-checked:bg-green peer-checked:border-green peer-checked:text-white transition">
+                  <i class="fa fa-check"></i>
+                </div>
+                <span class="text-md text-grey-1 font-regular">Kostum Adat</span>
+              </label>
+              <label class="flex items-center cursor-pointer gap-2">
+                <input type="checkbox" class="peer hidden">
+                <div class="w-5 h-5 rounded text-transparent text-xs border-2 border-grey-1 flex items-center justify-center peer-checked:bg-green peer-checked:border-green peer-checked:text-white transition">
+                  <i class="fa fa-check"></i>
+                </div>
+                <span class="text-md text-grey-1 font-regular">Kostum Tari</span>
+              </label>
+              <label class="flex items-center cursor-pointer gap-2">
+                <input type="checkbox" class="peer hidden">
+                <div class="w-5 h-5 rounded text-transparent text-xs border-2 border-grey-1 flex items-center justify-center peer-checked:bg-green peer-checked:border-green peer-checked:text-white transition">
+                  <i class="fa fa-check"></i>
+                </div>
+                <span class="text-md text-grey-1 font-regular">Kostum Karnaval</span>
+              </label>
+              <label class="flex items-center cursor-pointer gap-2">
+                <input type="checkbox" class="peer hidden">
+                <div class="w-5 h-5 rounded text-transparent text-xs border-2 border-grey-1 flex items-center justify-center peer-checked:bg-green peer-checked:border-green peer-checked:text-white transition">
+                  <i class="fa fa-check"></i>
+                </div>
+                <span class="text-md text-grey-1 font-regular">Aksesoris</span>
+              </label>
+            </form>
+          </div>
+          <div class="mb-6">
+            <h3 class="text-lg font-regular text-black mb-2">Penilaian</h3>
+            <form class="flex flex-col gap-2 text-body3">
+              <label class="flex items-center cursor-pointer gap-2">
+                <input type="radio" name="rating" class="peer hidden">
+                <div class="w-5 h-5 rounded text-transparent text-xs border-2 border-grey-1 flex items-center justify-center peer-checked:bg-green peer-checked:border-green peer-checked:text-white transition">
+                  <i class="fa fa-check"></i>
+                </div>
+                <span class="text-black font-medium">5.0</span>
+                <div class="flex text-yellow space-x-2">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </label>
+              <label class="flex items-center cursor-pointer gap-2">
+                <input type="radio" name="rating" class="peer hidden">
+                <div class="w-5 h-5 rounded text-transparent text-xs border-2 border-grey-1 flex items-center justify-center peer-checked:bg-green peer-checked:border-green peer-checked:text-white transition">
+                  <i class="fa fa-check"></i>
+                </div>
+                <span class="text-black font-medium">4.0</span>
+                <div class="flex text-yellow space-x-2">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star text-grey-2"></i>
+                </div>
+              </label>
+              <label class="flex items-center cursor-pointer gap-2">
+                <input type="radio" name="rating" class="peer hidden">
+                <div class="w-5 h-5 rounded text-transparent text-xs border-2 border-grey-1 flex items-center justify-center peer-checked:bg-green peer-checked:border-green peer-checked:text-white transition">
+                  <i class="fa fa-check"></i>
+                </div>
+                <span class="text-black font-medium">3.0</span>
+                <div class="flex text-yellow space-x-2">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star text-grey-2"></i>
+                  <i class="fa fa-star text-grey-2"></i>
+                </div>
+              </label>
+              <label class="flex items-center cursor-pointer gap-2">
+                <input type="radio" name="rating" class="peer hidden">
+                <div class="w-5 h-5 rounded text-transparent text-xs border-2 border-grey-1 flex items-center justify-center peer-checked:bg-green peer-checked:border-green peer-checked:text-white transition">
+                  <i class="fa fa-check"></i>
+                </div>
+                <span class="text-black font-medium">Semua Penilaian</span>
+              </label>
+            </form>
+          </div>
+          <div class="flex gap-4">
+            <button class="flex-1 bg-grey-2 px-4 py-2 rounded-lg font-medium text-black">Bersihkan</button>
+            <button class="flex-1 bg-dark px-4 py-2 rounded-lg font-medium text-white">Filter</button>
+          </div>
+        </aside>
+        <main class="w-3/4 px-6 py-5 bg-grey-2 rounded-lg">
+          <div class="relative mb-5">
+            <div class="absolute inset-0 flex items-center">
+              <div class="w-full border-t border-grey-1"></div>
+            </div>
+            <div class="relative flex items-center justify-between text-sm">
+              <h2 class="text-2xl pr-4 font-semibold bg-grey-2 text-black">Produk Kostum Baju Adat</h2>
+              <div class="relative inline-block w-48">
+                <select class="appearance-none w-full bg-white border border-grey-1 outline outline-grey-2 text-black text-body3 px-4 py-2 rounded-lg focus:outline-none cursor-pointer">
+                  <option>Produk Terbaru</option>
+                  <option>Produk Terlama</option>
+                  <option>Rating Tertinggi</option>
+                  <option>Rating Terendah</option>
+                </select>
+                <div class="pointer-events-none absolute inset-y-0 right-4 flex items-center text-black">
+                  <i class="fa fa-chevron-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-4">
+            <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+              <img src="/product/dayak.png" alt="Kostum Adat Dayak" class="w-full object-cover">
+              <div class="p-3">
+                <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Dayak</h3>
+                <p class="text-xs text-grey-1">Rp 50.000,00</p>
+              </div>
+              <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+                5.0 <i class="fa fa-star text-yellow"></i>
+              </div>
+            </a>
+            <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+              <img src="/product/padang.png" alt="Kostum Adat Padang" class="w-full object-cover">
+              <div class="p-3">
+                <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Padang</h3>
+                <p class="text-xs text-grey-1">Rp 60.000,00</p>
+              </div>
+              <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+                5.0 <i class="fa fa-star text-yellow"></i>
+              </div>
+            </a>
+            <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+              <img src="/product/jawa.png" alt="Kostum Adat Jawa Solo" class="w-full object-cover">
+              <div class="p-3">
+                <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Jawa Solo</h3>
+                <p class="text-xs text-grey-1">Rp 40.000,00</p>
+              </div>
+              <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+                5.0 <i class="fa fa-star text-yellow"></i>
+              </div>
+            </a>
+            <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+              <img src="/product/bali.png" alt="Kostum Adat Bali" class="w-full object-cover">
+              <div class="p-3">
+                <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Bali</h3>
+                <p class="text-xs text-grey-1">Rp 80.000,00</p>
+              </div>
+              <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+                5.0 <i class="fa fa-star text-yellow"></i>
+              </div>
+            </a>
+            <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+              <img src="/product/bugis.png" alt="Kostum Adat Bugis" class="w-full object-cover">
+              <div class="p-3">
+                <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Bugis</h3>
+                <p class="text-xs text-grey-1">Rp 45.000,00</p>
+              </div>
+              <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+                5.0 <i class="fa fa-star text-yellow"></i>
+              </div>
+            </a>
+            <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+              <img src="/product/sunda.png" alt="Kostum Adat Sunda" class="w-full object-cover">
+              <div class="p-3">
+                <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Sunda</h3>
+                <p class="text-xs text-grey-1">Rp 40.000,00</p>
+              </div>
+              <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+                5.0 <i class="fa fa-star text-yellow"></i>
+              </div>
+            </a>
+            <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+              <img src="/product/dayak.png" alt="Kostum Adat Dayak" class="w-full object-cover">
+              <div class="p-3">
+                <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Dayak</h3>
+                <p class="text-xs text-grey-1">Rp 50.000,00</p>
+              </div>
+              <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+                5.0 <i class="fa fa-star text-yellow"></i>
+              </div>
+            </a>
+            <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+              <img src="/product/padang.png" alt="Kostum Adat Padang" class="w-full object-cover">
+              <div class="p-3">
+                <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Padang</h3>
+                <p class="text-xs text-grey-1">Rp 60.000,00</p>
+              </div>
+              <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+                5.0 <i class="fa fa-star text-yellow"></i>
+              </div>
+            </a>
+            <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+              <img src="/product/jawa.png" alt="Kostum Adat Jawa Solo" class="w-full object-cover">
+              <div class="p-3">
+                <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Jawa Solo</h3>
+                <p class="text-xs text-grey-1">Rp 40.000,00</p>
+              </div>
+              <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+                5.0 <i class="fa fa-star text-yellow"></i>
+              </div>
+            </a>
+            <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+              <img src="/product/bali.png" alt="Kostum Adat Bali" class="w-full object-cover">
+              <div class="p-3">
+                <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Bali</h3>
+                <p class="text-xs text-grey-1">Rp 80.000,00</p>
+              </div>
+              <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+                5.0 <i class="fa fa-star text-yellow"></i>
+              </div>
+            </a>
+            <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+              <img src="/product/bugis.png" alt="Kostum Adat Bugis" class="w-full object-cover">
+              <div class="p-3">
+                <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Bugis</h3>
+                <p class="text-xs text-grey-1">Rp 45.000,00</p>
+              </div>
+              <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+                5.0 <i class="fa fa-star text-yellow"></i>
+              </div>
+            </a>
+            <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+              <img src="/product/sunda.png" alt="Kostum Adat Sunda" class="w-full object-cover">
+              <div class="p-3">
+                <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Sunda</h3>
+                <p class="text-xs text-grey-1">Rp 40.000,00</p>
+              </div>
+              <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+                5.0 <i class="fa fa-star text-yellow"></i>
+              </div>
+            </a>
+          </div>
+          <div class="flex justify-center items-center space-x-3 pt-6 text-sm text-grey-1">
+            <button class="flex items-center space-x-1">
+              <span>←</span>
+              <span>Sebelumnya</span>
+            </button>
+            <button class="w-8 h-8 rounded-md bg-dark text-white">1</button>
+            <button class="w-8 h-8">2</button>
+            <button class="w-8 h-8">3</button>
+            <span>...</span>
+            <button class="w-8 h-8">67</button>
+            <button class="w-8 h-8">68</button>
+            <button class="flex items-center space-x-1">
+              <span>Berikutnya</span>
+              <span>→</span>
+            </button>
+          </div>
+        </main>
+      </div>
+      <!-- END: Product List -->
+
+    </main>
+
+    <!-- BEGIN: Footer -->
+    <footer class="bg-white py-12">
+      <div class="container mx-auto grid grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="h-1/2 rounded-full overflow-hidden">
+              <img src="/logo.png" alt="Logo Pamoijie" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <p class="text-sm text-grey-1 leading-relaxed">Sewa baju adat dari berbagai daerah di Indonesia untuk acara spesial Anda! Tersedia untuk pernikahan, festival, pentas seni, dan lainnya. Kami menyediakan pakaian berkualitas dengan desain autentik.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Perusahaan</h4>
+          <ul class="text-sm text-black space-y-2">
+            <li><a href="/about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Bantuan</h4>
+          <ul class="text-sm text-black space-y-2">
+            <li><a href="/contact.html">Hubungi kami</a></li>
+            <li><a href="/about.html">Cara Sewa</a></li>
+            <li><a href="/index_profile.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Hubungi Kami</h4>
+          <p class="text-sm text-black"><i class="fas fa-phone-alt mr-2"></i>+62 822-2878-0540</p>
+          <h4 class="text-sm font-semibold text-grey-1 mt-4 mb-2">Sosial Media</h4>
+          <p class="text-sm text-black"><i class="fab fa-instagram mr-2"></i>@pamoijie_artcollection</p>
+        </div>
+      </div>
+      <div class="container flex justify-end items-center mx-auto py-3 px-5 mt-5 bg-dark text-white text-xs rounded-lg">
+        <div class="flex space-x-3">
+          <a href="/terms.html">Syarat & Ketentuan</a>
+          <a href="/terms.html">Kebijakan Privasi</a>
+        </div>
+      </div>
+    </footer>
+    <!-- END: Footer -->
+
+  </body>
+</html>

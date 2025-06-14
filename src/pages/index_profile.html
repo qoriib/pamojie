@@ -1,0 +1,361 @@
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Beranda | Pamoijie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/styles/main.css">
+  </head>
+  <body class="bg-grey-2 font-ubuntu">
+
+    <!-- BEGIN: Header -->
+    <div class="bg-white py-5">
+      <header class="container mx-auto">
+        <div class="flex items-center justify-between py-4 px-6 space-x-4 bg-grey-2 rounded-2xl">
+          <div class="flex-shrink-0">
+            <img src="/logo.png" alt="Logo" class="h-16 w-auto">
+          </div>
+          <div class="flex-grow relative overflow-hidden bg-white border border-grey-1 rounded-xl shadow-sm">
+            <select class="px-4 py-3 mr-3 text-grey-1 focus:outline-none focus:shadow-outline cursor-pointer">
+              <option>Semua Kategori</option>
+              <option>Kategori 1</option>
+              <option>Kategori 2</option>
+            </select>
+            <input type="text" class="appearance-none px-4 py-1 my-2 border-l border-grey-1 text-grey-1 focus:outline-none focus:shadow-outline" placeholder="Cari...">
+            <a href="/product_list_dayak.html" class="absolute top-0 right-0 h-10 w-10 p-2.5 bg-dark rounded-lg m-1">
+              <img class="inline-block" src="/icons-sm/Search.png" alt="Search Icon">
+            </a>
+          </div>
+          <div class="flex items-center space-x-4 ml-4">
+            <a href="/index_profile_notification.html" class="text-grey-1">
+              <img class="inline-block h-6 w-6 mr-1" src="/icons-sm/Notification.png" alt="Notification Icon">
+              <span class="inline">Notifikasi</span>
+            </a>
+            <a href="/cart.html" class="text-grey-1">
+              <img class="inline-block h-6 w-6 mr-1" src="/icons-sm/Cart.png" alt="Cart Icon">
+              <span class="inline">Keranjang</span>
+            </a>
+            <a href="/profile.html" class="bg-dark text-white py-3 px-3 rounded-xl">
+              <img class="inline-block h-6 w-6 mr-1" src="/icons-sm/User.png" alt="User Icon">
+              <span class="inline">Profil</span>
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- END: Header -->
+
+    <main class="flex flex-col space-y-5 py-5">
+
+      <!-- BEGIN: Carousel -->
+      <div class="container mx-auto relative">
+        <div class="relative overflow-hidden rounded-2xl">
+          <img src="/banner.png" alt="Gambar Utama" class="w-full h-auto object-cover">
+          <div class="absolute px-12 right-16 bottom-16 flex flex-col justify-end items-end text-center">
+            <a href="#product" class="bg-dark text-white font-semibold py-3 px-16 rounded-full flex items-center">
+              Mulai Belanja
+            </a>
+          </div>
+        </div>
+        <div class="flex justify-center absolute bottom-0 left-0 right-0 py-3 bg-grey-2 opacity-50 rounded-t-3xl">
+          <div class="flex space-x-2">
+            <button class="w-10 h-3 rounded-full bg-gray-500 hover:bg-gray-700"></button>
+            <button class="w-10 h-3 rounded-full bg-gray-500 hover:bg-gray-700"></button>
+            <button class="w-10 h-3 rounded-full bg-gray-500 hover:bg-gray-700"></button>
+            <button class="w-10 h-3 rounded-full bg-gray-500 hover:bg-gray-700"></button>
+          </div>
+        </div>
+      </div>
+      <!-- END: Carousel -->
+
+      <!-- BEGIN: Collection -->
+      <div class="container flex items-center justify-around mx-auto my-4 py-5">
+        <a href="/product_list.html" class="flex flex-col items-center">
+          <img src="/icons-xl/Seminole.png" alt="Ikon Adat" class="w-16 h-16">
+          <span class="text-xl font-medium text-black mt-1">Adat</span>
+        </a>
+        <a href="/product_list.html" class="flex flex-col items-center">
+          <img src="/icons-xl/Tango.png" alt="Ikon Tari" class="w-16 h-16">
+          <span class="text-xl font-medium text-black mt-1">Tari</span>
+        </a>
+        <a href="/product_list.html" class="flex flex-col items-center">
+          <img src="/icons-xl/Mardi Gras Mask.png" alt="Ikon Karnaval" class="w-16 h-16">
+          <span class="text-xl font-medium text-black mt-1">Karnaval</span>
+        </a>
+        <a href="/product_list.html" class="flex flex-col items-center">
+          <img src="/icons-xl/Bracelet.png" alt="Ikon Aksesoris" class="w-16 h-16">
+          <span class="text-xl font-medium text-black mt-1">Aksesoris</span>
+        </a>
+      </div>
+      <!-- END: Collection -->
+
+      <!-- BEGIN: Products -->
+      <div class="container mx-auto py-5" id="product">
+        <div class="relative mb-5">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-grey-1"></div>
+          </div>
+          <div class="relative flex items-center justify-between text-sm">
+            <h2 class="text-2xl pr-4 font-semibold bg-grey-2 text-black">Semua Produk</h2>
+            <a href="#" class="pl-4 bg-grey-2 text-dark">Lihat Semua</a>
+          </div>
+        </div>
+        <div class="grid grid-cols-4 gap-4">
+          <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+            <img src="/product/dayak.png" alt="Kostum Adat Dayak" class="w-full object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Dayak</h3>
+              <p class="text-xs text-grey-1">Rp 50.000,00</p>
+            </div>
+            <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+              5.0 <i class="fa fa-star text-yellow"></i>
+            </div>
+          </a>
+          <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+            <img src="/product/padang.png" alt="Kostum Adat Padang" class="w-full object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Padang</h3>
+              <p class="text-xs text-grey-1">Rp 60.000,00</p>
+            </div>
+            <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+              4.0 <i class="fa fa-star text-yellow"></i>
+            </div>
+          </a>
+          <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+            <img src="/product/jawa.png" alt="Kostum Adat Jawa Solo" class="w-full object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Jawa Solo</h3>
+              <p class="text-xs text-grey-1">Rp 40.000,00</p>
+            </div>
+            <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+              5.0 <i class="fa fa-star text-yellow"></i>
+            </div>
+          </a>
+          <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+            <img src="/product/bali.png" alt="Kostum Adat Bali" class="w-full object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Bali</h3>
+              <p class="text-xs text-grey-1">Rp 80.000,00</p>
+            </div>
+            <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+              5.0 <i class="fa fa-star text-yellow"></i>
+            </div>
+          </a>
+          <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+            <img src="/product/bugis.png" alt="Kostum Adat Bugis" class="w-full object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Bugis</h3>
+              <p class="text-xs text-grey-1">Rp 45.000,00</p>
+            </div>
+            <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+              5.0 <i class="fa fa-star text-yellow"></i>
+            </div>
+          </a>
+          <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+            <img src="/product/sunda.png" alt="Kostum Adat Sunda" class="w-full object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-black mb-1">Kostum Adat Sunda</h3>
+              <p class="text-xs text-grey-1">Rp 40.000,00</p>
+            </div>
+            <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+              4.0 <i class="fa fa-star text-yellow"></i>
+            </div>
+          </a>
+          <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+            <img src="/product/pilot.png" alt="Aksesoris Kostum Pilot" class="w-full object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-black mb-1">Aksesoris Kostum Pilot</h3>
+              <p class="text-xs text-grey-1">Rp 25.000,00</p>
+            </div>
+            <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+              4.0 <i class="fa fa-star text-yellow"></i>
+            </div>
+          </a>
+          <a href="/product_detail.html" class="bg-white rounded-xl shadow-md overflow-hidden relative">
+            <img src="/product/bross.png" alt="Bross Kebaya Bali" class="w-full object-cover">
+            <div class="p-3">
+              <h3 class="text-sm font-semibold text-black mb-1">Bross Kebaya Bali</h3>
+              <p class="text-xs text-grey-1">Rp 10.000,00</p>
+            </div>
+            <div class="absolute top-3 left-3 py-1 px-2 bg-white text-black text-xs rounded">
+              5.0 <i class="fa fa-star text-yellow"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- END: Products -->
+
+      <!-- BEGIN: Reviews -->
+      <div class="container mx-auto py-5">
+        <div class="relative mb-5">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-grey-1"></div>
+          </div>
+          <div class="relative flex items-center justify-between text-sm">
+            <h2 class="text-2xl pr-4 font-semibold bg-grey-2 text-black">Ulasan</h2>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="bg-white rounded-xl shadow-md p-4">
+            <div class="flex items-center mb-2">
+              <div class="w-8 h-8 rounded-full overflow-hidden">
+                <img src="/user/user-1.png" alt="Foto Profil" class="w-full h-full object-cover">
+              </div>
+              <div class="ml-2">
+                <h3 class="text-sm font-semibold text-black">Dinda A.</h3>
+                <div class="flex items-center text-yellow text-xs">
+                  <span class="text-grey-1">5.0</span>
+                  <div class="flex space-x-1 mx-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-xs text-grey-1">Kostumnya sesuai dengan gambar.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4">
+            <div class="flex items-center mb-2">
+              <div class="w-8 h-8 rounded-full overflow-hidden">
+                <img src="/user/user-2.png" alt="Foto Profil" class="w-full h-full object-cover">
+              </div>
+              <div class="ml-2">
+                <h3 class="text-sm font-semibold text-black">Daffa S.</h3>
+                <div class="flex items-center text-yellow text-xs">
+                  <span class="text-grey-1">5.0</span>
+                  <div class="flex space-x-1 mx-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-xs text-grey-1">Pengiriman cepat dan pelayanan yg baik.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow-md p-4">
+            <div class="flex items-center mb-2">
+              <div class="w-8 h-8 rounded-full overflow-hidden">
+                <img src="/user/user-3.png"  alt="Foto Profil" class="w-full h-full object-cover">
+              </div>
+              <div class="ml-2">
+                <h3 class="text-sm font-semibold text-black">Thomy S.</h3>
+                <div class="flex items-center text-yellow text-xs">
+                  <span class="text-grey-1">5.0</span>
+                  <div class="flex space-x-1 mx-1">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-xs text-grey-1">Barang sesuai ukuran.</p>
+          </div>
+        </div>
+      </div>
+      <!-- END: Reviews -->
+
+      <!-- BEGIN: Q&A -->
+      <div class="container mx-auto py-5">
+        <h2 class="text-xl font-semibold text-black mb-6 text-center">Dapatkan Pertanyaan</h2>
+        <div class="space-y-4">
+          <div class="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm">
+            <span class="text-black">Kostum adat dari daerah mana yang Anda cari?</span>
+            <button class="text-black focus:outline-none">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm">
+            <span class="text-black">Kapan Anda membutuhkan kostum adat ini?</span>
+            <button class="text-black focus:outline-none">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm">
+            <span class="text-black">Apa ukuran pakaian yang Anda butuhkan?</span>
+            <button class="text-black focus:outline-none">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm">
+            <span class="text-black">Apakah Anda ingin menambahkan aksesoris tambahan?</span>
+            <button class="text-black focus:outline-none">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm">
+            <span class="text-black">Bisakah pembayaran dilakukan dengan debit atau kredit?</span>
+            <button class="text-black focus:outline-none">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- END: Q&A -->
+
+    </main>
+
+    <!-- BEGIN: Footer -->
+    <footer class="bg-white py-12">
+      <div class="container mx-auto grid grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="h-1/2 rounded-full overflow-hidden">
+              <img src="/logo.png" alt="Logo Pamoijie" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <p class="text-sm text-grey-1 leading-relaxed">Sewa baju adat dari berbagai daerah di Indonesia untuk acara spesial Anda! Tersedia untuk pernikahan, festival, pentas seni, dan lainnya. Kami menyediakan pakaian berkualitas dengan desain autentik.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Perusahaan</h4>
+          <ul class="text-sm text-black space-y-2">
+            <li><a href="/about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Bantuan</h4>
+          <ul class="text-sm text-black space-y-2">
+            <li><a href="/contact.html">Hubungi kami</a></li>
+            <li><a href="/about.html">Cara Sewa</a></li>
+            <li><a href="/index_profile.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Hubungi Kami</h4>
+          <p class="text-sm text-black"><i class="fas fa-phone-alt mr-2"></i>+62 822-2878-0540</p>
+          <h4 class="text-sm font-semibold text-grey-1 mt-4 mb-2">Sosial Media</h4>
+          <p class="text-sm text-black"><i class="fab fa-instagram mr-2"></i>@pamoijie_artcollection</p>
+        </div>
+      </div>
+      <div class="container flex justify-end items-center mx-auto py-3 px-5 mt-5 bg-dark text-white text-xs rounded-lg">
+        <div class="flex space-x-3">
+          <a href="/terms.html">Syarat & Ketentuan</a>
+          <a href="/terms.html">Kebijakan Privasi</a>
+        </div>
+      </div>
+    </footer>
+    <!-- END: Footer -->
+
+  </body>
+</html>

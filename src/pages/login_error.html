@@ -1,0 +1,117 @@
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Masuk | Pamoijie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/styles/main.css">
+  </head>
+  <body class="bg-grey-2 font-ubuntu">
+
+    <!-- BEGIN: Header -->
+    <div class="bg-white py-5">
+      <header class="container mx-auto">
+        <div class="flex items-center py-4 px-6 space-x-4 bg-grey-2 rounded-2xl">
+          <div class="flex-shrink-0">
+            <img src="/logo.png" alt="Logo" class="h-16 w-auto">
+          </div>
+          <h1 class="text-2xl text-dark font-medium">Login</h1>
+        </div>
+      </header>
+    </div>
+    <!-- END: Header -->
+
+    <!-- BEGIN: Form -->
+    <main class="container mx-auto flex items-center justify-center py-12">
+      <div class="flex flex-col w-[25rem]">
+        <h2 class="text-2xl font-semibold text-black mb-2 text-left">Selamat Datang di <span class="text-dark">Pamojie</span></h2>
+        <p class="text-grey-1 mb-6 text-left">Masuk ke Akun Anda</p>
+        <form class="space-y-4">
+          <div class="flex flex-col space-y-2">
+            <label for="email" class="block text-sm font-medium text-black">Alamat Email <span class="text-red">*</span></label>
+            <input type="email" id="email" class="block py-2 px-4 w-full border border-grey-1 rounded-md shadow-sm" placeholder="Masukkan alamat Email anda">
+          </div>
+          <div class="flex flex-col space-y-2">
+            <label for="password" class="block text-sm font-medium text-black">Kata Sandi Email <span class="text-red">*</span></label>
+            <div class="relative">
+              <input type="password" id="password" class="block py-2 px-4 w-full border border-grey-1 rounded-md shadow-sm" placeholder="Masukkan kata sandi anda">
+              <button type="button" class="absolute items-center inset-y-0 right-0 pr-3 flex text-sm text-grey-1">
+                <i class="far fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="flex flex-col items-end space-y-3">
+            <p class="text-xs text-red text-right">Mohon maaf password atau kata sandi anda salah. Silahkan masuk ulang kata sandi anda!</p>
+            <p class="text-xs text-gray-600 text-right">Lupa kata sandi? <a href="#" class="text-xs text-dark focus:outline-none focus:underline">Tekan disini</a></p>
+          </div>
+          <a href="/login_valid.html" class="block w-full font-medium text-base rounded-md py-2 px-4 bg-dark text-white text-center focus:outline-none focus:shadow-outline">Masuk</a>
+        </form>
+        <div class="relative mt-2">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-grey-1"></div>
+          </div>
+          <div class="relative flex justify-center text-sm">
+            <span class="px-2 bg-grey-2 text-black">Atau</span>
+          </div>
+        </div>
+        <div class="mt-6 space-y-3">
+          <button type="button" class="flex items-center justify-center w-full border bg-white text-black border-grey-1 rounded-md shadow-sm py-3 focus:outline-none">
+            <i class="fab fa-google mr-3"></i>
+            Masuk Dengan akun Google
+          </button>
+          <button type="button" class="flex items-center justify-center w-full border bg-white text-black border-grey-1 rounded-md shadow-sm py-3 focus:outline-none">
+            <i class="fab fa-facebook mr-3"></i>
+            Masuk Dengan akun Facebook
+          </button>
+        </div>
+        <p class="mt-6 text-xs text-grey-1 text-right">Belum punya akun? <a href="/register.html" class="text-dark focus:outline-none">Register</a></p>
+      </div>
+    </main>
+    <!-- END: Form -->
+
+    <!-- BEGIN: Footer -->
+    <footer class="bg-white py-12">
+      <div class="container mx-auto grid grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="h-1/2 rounded-full overflow-hidden">
+              <img src="/logo.png" alt="Logo Pamoijie" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <p class="text-sm text-grey-1 leading-relaxed">Sewa baju adat dari berbagai daerah di Indonesia untuk acara spesial Anda! Tersedia untuk pernikahan, festival, pentas seni, dan lainnya. Kami menyediakan pakaian berkualitas dengan desain autentik.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Perusahaan</h4>
+          <ul class="text-sm text-black space-y-2">
+            <li><a href="/about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Bantuan</h4>
+          <ul class="text-sm text-black space-y-2">
+            <li><a href="/contact.html">Hubungi kami</a></li>
+            <li><a href="/about.html">Cara Sewa</a></li>
+            <li><a href="/index_profile.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Hubungi Kami</h4>
+          <p class="text-sm text-black"><i class="fas fa-phone-alt mr-2"></i>+62 822-2878-0540</p>
+          <h4 class="text-sm font-semibold text-grey-1 mt-4 mb-2">Sosial Media</h4>
+          <p class="text-sm text-black"><i class="fab fa-instagram mr-2"></i>@pamoijie_artcollection</p>
+        </div>
+      </div>
+      <div class="container flex justify-end items-center mx-auto py-3 px-5 mt-5 bg-dark text-white text-xs rounded-lg">
+        <div class="flex space-x-3">
+          <a href="/terms.html">Syarat & Ketentuan</a>
+          <a href="/terms.html">Kebijakan Privasi</a>
+        </div>
+      </div>
+    </footer>
+    <!-- END: Footer -->
+
+  </body>
+</html>

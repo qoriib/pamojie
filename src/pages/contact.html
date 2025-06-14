@@ -1,0 +1,134 @@
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Kontak | Pamoijie</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/styles/main.css">
+  </head>
+  <body class="bg-grey-2 font-ubuntu">
+
+    <!-- BEGIN: Header -->
+    <div class="bg-white py-5">
+      <header class="container mx-auto">
+        <div class="flex items-center justify-between py-4 px-6 space-x-4 bg-grey-2 rounded-2xl">
+          <div class="flex-shrink-0">
+            <img src="/logo.png" alt="Logo" class="h-16 w-auto">
+          </div>
+          <div class="flex-grow relative overflow-hidden bg-white border border-grey-1 rounded-xl shadow-sm">
+            <select class="px-4 py-3 mr-3 text-grey-1 focus:outline-none focus:shadow-outline cursor-pointer">
+              <option>Semua Kategori</option>
+              <option>Kategori 1</option>
+              <option>Kategori 2</option>
+            </select>
+            <input type="text" class="appearance-none px-4 py-1 my-2 border-l border-grey-1 text-grey-1 focus:outline-none focus:shadow-outline" placeholder="Cari...">
+            <a href="/product_list_dayak.html" class="absolute top-0 right-0 h-10 w-10 p-2.5 bg-dark rounded-lg m-1">
+              <img class="inline-block" src="/icons-sm/Search.png" alt="Search Icon">
+            </a>
+          </div>
+          <div class="flex items-center space-x-4 ml-4">
+            <a href="/index_profile_notification.html" class="text-grey-1">
+              <img class="inline-block h-6 w-6 mr-1" src="/icons-sm/Notification.png" alt="Notification Icon">
+              <span class="inline">Notifikasi</span>
+            </a>
+            <a href="/cart.html" class="text-grey-1">
+              <img class="inline-block h-6 w-6 mr-1" src="/icons-sm/Cart.png" alt="Cart Icon">
+              <span class="inline">Keranjang</span>
+            </a>
+            <a href="/profile.html" class="bg-dark text-white py-3 px-3 rounded-xl">
+              <img class="inline-block h-6 w-6 mr-1" src="/icons-sm/User.png" alt="User Icon">
+              <span class="inline">Profil</span>
+            </a>
+          </div>
+        </div>
+      </header>
+    </div>
+    <!-- END: Header -->
+
+    <!-- BEGIN: Form -->
+    <main class="container mx-auto py-5">
+      <div class="relative mb-5">
+        <div class="absolute inset-0 flex items-center">
+          <div class="w-full border-t border-grey-1"></div>
+        </div>
+        <div class="relative flex items-center justify-between text-sm">
+          <h2 class="text-2xl pr-4 font-semibold bg-grey-2 text-black">Hubungi Kami</h2>
+        </div>
+      </div>
+      <div class="flex items-start justify-center gap-8">
+        <div class="w-1/2 space-y-4">
+          <div class="flex flex-col space-y-2">
+            <label for="nama" class="block text-sm font-semibold text-black">Nama <span class="text-red">*</span></label>
+            <input type="nama" id="nama" class="block py-2 px-4 w-full border-grey-1 rounded-md shadow-sm focus:outline-none" placeholder="Masukkan nama anda">
+          </div>
+          <div class="flex flex-col space-y-2">
+            <label for="email" class="block text-sm font-semibold text-black">Alamat Email <span class="text-red">*</span></label>
+            <input type="email" id="email" class="block py-2 px-4 w-full border-grey-1 rounded-md shadow-sm focus:outline-none" placeholder="Masukkan alamat Email anda">
+          </div>
+          <div class="flex flex-col space-y-2">
+            <label for="comment" class="block text-sm font-semibold text-black">Komentar <span class="text-red">*</span></label>
+            <textarea type="comment" id="comment" class="block py-2 px-4 w-full border-grey-1 rounded-md shadow-sm focus:outline-none" placeholder="Masukkan Komentar anda"></textarea>
+          </div>
+        </div>
+        <div class="w-1/2 text-sm text-grey-1 space-y-2">
+          <p class="text-black text-md">Pramojie Art - Bondowoso</p>
+          <p>Nama: Mohammad Abdul Azis</p>
+          <p>Kabupaten: Bondowoso</p>
+          <p>Kecamatan: Prajekan Kidul</p>
+          <p>RT/RW: 01/14</p>
+          <p>Kode Pos: 682285</p>
+          <p>No WA: 082228780540</p>
+          <hr />
+        </div>
+      </div>
+      <button class="bg-dark text-white text-md font-medium py-2 px-10 mt-4 rounded-md focus:outline-none">Kirim</button>
+      <img class="rounded-lg object-fill mt-8" src="/contact.png" alt="Illustration">
+    </main>
+    <!-- END: Form -->
+
+    <!-- BEGIN: Footer -->
+    <footer class="bg-white py-12">
+      <div class="container mx-auto grid grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="h-1/2 rounded-full overflow-hidden">
+              <img src="/logo.png" alt="Logo Pamoijie" class="w-full h-full object-cover">
+            </div>
+          </div>
+          <p class="text-sm text-grey-1 leading-relaxed">Sewa baju adat dari berbagai daerah di Indonesia untuk acara spesial Anda! Tersedia untuk pernikahan, festival, pentas seni, dan lainnya. Kami menyediakan pakaian berkualitas dengan desain autentik.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Perusahaan</h4>
+          <ul class="text-sm text-black space-y-2">
+            <li><a href="/about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Bantuan</h4>
+          <ul class="text-sm text-black space-y-2">
+            <li><a href="/contact.html">Hubungi kami</a></li>
+            <li><a href="/about.html">Cara Sewa</a></li>
+            <li><a href="/index_profile.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-grey-1 mb-3">Hubungi Kami</h4>
+          <p class="text-sm text-black"><i class="fas fa-phone-alt mr-2"></i>+62 822-2878-0540</p>
+          <h4 class="text-sm font-semibold text-grey-1 mt-4 mb-2">Sosial Media</h4>
+          <p class="text-sm text-black"><i class="fab fa-instagram mr-2"></i>@pamoijie_artcollection</p>
+        </div>
+      </div>
+      <div class="container flex justify-end items-center mx-auto py-3 px-5 mt-5 bg-dark text-white text-xs rounded-lg">
+        <div class="flex space-x-3">
+          <a href="/terms.html">Syarat & Ketentuan</a>
+          <a href="/terms.html">Kebijakan Privasi</a>
+        </div>
+      </div>
+    </footer>
+    <!-- END: Footer -->
+
+  </body>
+</html>
