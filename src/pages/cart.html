@@ -92,7 +92,7 @@
                 </button>
               </div>
               <span class="text-md text-grey-1 font-normal">Rp 35.000,00</span>
-              <button class="appearance-none flex items-center justify-center text-lg text-grey-1 w-9 h-9 rounded-lg border border-grey-1">
+              <button class="appearance-none flex items-center justify-center text-lg text-grey-1 w-9 h-9 rounded-lg border border-grey-1 btn-delete">
                 <i class="fa fa-trash-alt"></i>
               </button>
             </div>
@@ -118,7 +118,7 @@
                 </button>
               </div>
               <span class="text-md text-grey-1 font-normal">Rp 99.000,00</span>
-              <button class="appearance-none flex items-center justify-center text-lg text-grey-1 w-9 h-9 rounded-lg border border-grey-1">
+              <button class="appearance-none flex items-center justify-center text-lg text-grey-1 w-9 h-9 rounded-lg border border-grey-1 btn-delete">
                 <i class="fa fa-trash-alt"></i>
               </button>
             </div>
@@ -144,7 +144,7 @@
                 </button>
               </div>
               <span class="text-md text-grey-1 font-normal">Rp 60.000,00</span>
-              <button class="appearance-none flex items-center justify-center text-lg text-grey-1 w-9 h-9 rounded-lg border border-grey-1">
+              <button class="appearance-none flex items-center justify-center text-lg text-grey-1 w-9 h-9 rounded-lg border border-grey-1 btn-delete">
                 <i class="fa fa-trash-alt"></i>
               </button>
             </div>
@@ -263,4 +263,18 @@
     <!-- END: Footer -->
 
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Ambil semua tombol dengan class btn-delete
+      document.querySelectorAll('.btn-delete').forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          // Cari parent terdekat yang mewakili item cart (div yang p-4, dst)
+          const cartItem = btn.closest('.bg-white.p-4.rounded-xl.shadow');
+          if(cartItem) {
+            cartItem.remove();
+          }
+        });
+      });
+    });
+  </script>
 </html>
