@@ -49,9 +49,14 @@
     <!-- END: Header -->
 
     <main class="flex flex-col space-y-5 py-5">
+      <div class="flex gap-3 items-center container mx-auto">
+        <a href="/product_list.html" class="py-2">
+          <i class="fa fa-arrow-left"></i>
+        </a>
+      </div>
 
       <!-- BEGIN: Product Display -->
-      <div class="container flex flex-row py-5 gap-8 mx-auto">
+      <div class="container flex flex-row pb-5 gap-8 mx-auto">
         <div class="w-full max-w-[35rem] flex flex-col gap-4">
           <img src="/product-detail/main.png" alt="Kostum Adat Dayak" class="rounded-2xl shadow-lg">
           <div class="flex gap-4 pb-4 overflow-x-auto">
@@ -122,45 +127,72 @@
           <div class="bg-white rounded-xl shadow-md overflow-hidden p-4 mb-4">
             <label class="text-xl font-bold text-black mb-3 block">Tetapkan Variasi</label>
             <div class="flex items-center justify-start gap-3 mb-4">
-              <button class="flex relative border border-grey-2 py-2 px-5 rounded-lg">
-                Variasi 1
-              </button>
-              <button class="flex relative border border-grey-2 py-2 px-5 rounded-lg">
-                Variasi 2
-              </button>
-              <button class="flex relative border border-grey-2 py-2 px-5 rounded-lg">
-                Variasi 3
-              </button>
-              <button class="flex relative border border-grey-2 py-2 px-5 rounded-lg">
-                Variasi 4
-              </button>
+              <div>
+                <input type="radio" id="variasi1" name="variasi" class="peer hidden" checked>
+                <label for="variasi1" class="peer-checked:border-dark flex border border-grey-2 py-2 px-5 rounded-lg cursor-pointer transition-colors">
+                  Variasi 1
+                </label>
+              </div>
+              <div>
+                <input type="radio" id="variasi2" name="variasi" class="peer hidden">
+                <label for="variasi2" class="peer-checked:border-dark flex border border-grey-2 py-2 px-5 rounded-lg cursor-pointer transition-colors">
+                  Variasi 2
+                </label>
+              </div>
+              <div>
+                <input type="radio" id="variasi3" name="variasi" class="peer hidden">
+                <label for="variasi3" class="peer-checked:border-dark flex border border-grey-2 py-2 px-5 rounded-lg cursor-pointer transition-colors">
+                  Variasi 3
+                </label>
+              </div>
+              <div>
+                <input type="radio" id="variasi4" name="variasi" class="peer hidden">
+                <label for="variasi4" class="peer-checked:border-dark flex border border-grey-2 py-2 px-5 rounded-lg cursor-pointer transition-colors">
+                  Variasi 4
+                </label>
+              </div>
             </div>
             <label class="text-xl font-bold text-black mb-3 block">Tetapkan Ukuran</label>
             <div class="flex items-center justify-start gap-3 mb-4">
-              <button class="flex relative border border-grey-2 py-2 px-8 rounded-lg">
-                XS
-              </button>
-              <button class="flex relative border border-grey-2 py-2 px-8 rounded-lg">
-                S
-              </button>
-              <button class="flex relative border border-grey-2 py-2 px-8 rounded-lg">
-                M
-              </button>
-              <button class="flex relative border border-grey-2 py-2 px-8 rounded-lg">
-                L
-              </button>
-              <button class="flex relative border border-grey-2 py-2 px-8 rounded-lg">
-                XL
-              </button>
+              <div>
+                <input type="radio" id="ukuran-xs" name="ukuran" class="peer hidden" checked>
+                <label for="ukuran-xs" class="peer-checked:border-dark flex border border-grey-2 py-2 px-8 rounded-lg cursor-pointer transition-colors">
+                  XS
+                </label>
+              </div>
+              <div>
+                <input type="radio" id="ukuran-s" name="ukuran" class="peer hidden">
+                <label for="ukuran-s" class="peer-checked:border-dark flex border border-grey-2 py-2 px-8 rounded-lg cursor-pointer transition-colors">
+                  S
+                </label>
+              </div>
+              <div>
+                <input type="radio" id="ukuran-m" name="ukuran" class="peer hidden">
+                <label for="ukuran-m" class="peer-checked:border-dark flex border border-grey-2 py-2 px-8 rounded-lg cursor-pointer transition-colors">
+                  M
+                </label>
+              </div>
+              <div>
+                <input type="radio" id="ukuran-l" name="ukuran" class="peer hidden">
+                <label for="ukuran-l" class="peer-checked:border-dark flex border border-grey-2 py-2 px-8 rounded-lg cursor-pointer transition-colors">
+                  L
+                </label>
+              </div>
+              <div>
+                <input type="radio" id="ukuran-xl" name="ukuran" class="peer hidden">
+                <label for="ukuran-xl" class="peer-checked:border-dark flex border border-grey-2 py-2 px-8 rounded-lg cursor-pointer transition-colors">
+                  XL
+                </label>
+              </div>
             </div>
             <label class="text-xl font-bold text-black mb-3 block">Tetapkan Jumlah</label>
             <div class="flex items-center justify-start gap-3">
-              <div class="flex relative border border-grey-2 rounded-lg">
-                <button class="h-8 w-8 text-sm flex justify-center items-center bg-grey-3 text-grey-1 rounded-md absolute left-1 top-1">
+              <div class="flex relative border border-grey-2 rounded-lg quantity-wrapper">
+                <button type="button" class="btn-minus h-8 w-8 text-sm flex justify-center items-center bg-grey-3 text-grey-1 rounded-md absolute left-1 top-1">
                   <i class="fa fa-minus"></i>
                 </button>
-                <input type="number" value="0" class="w-20 h-10 text-center text-sm border-0 appearance-none focus:ring-0 focus:outline-none mx-3">
-                <button class="h-8 w-8 text-sm flex justify-center items-center bg-grey-3 text-grey-1 rounded-md absolute right-1 top-1">
+                <input type="number" value="0" min="0" max="20" class="quantity-input w-20 h-10 text-center text-sm border-0 appearance-none focus:ring-0 focus:outline-none mx-3">
+                <button type="button" class="btn-plus h-8 w-8 text-sm flex justify-center items-center bg-grey-3 text-grey-1 rounded-md absolute right-1 top-1">
                   <i class="fa fa-plus"></i>
                 </button>
               </div>
@@ -529,4 +561,30 @@
     <!-- END: Footer -->
 
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const wrapper = document.querySelector('.quantity-wrapper');
+      const minusBtn = wrapper.querySelector('.btn-minus');
+      const plusBtn = wrapper.querySelector('.btn-plus');
+      const input = wrapper.querySelector('.quantity-input');
+      const max = parseInt(input.getAttribute('max')) || 9999;
+      const min = parseInt(input.getAttribute('min')) || 0;
+
+      minusBtn.addEventListener('click', function() {
+        let value = parseInt(input.value) || 0;
+        if (value > min) {
+          input.value = value - 1;
+          input.dispatchEvent(new Event('change')); // optional: trigger change
+        }
+      });
+
+      plusBtn.addEventListener('click', function() {
+        let value = parseInt(input.value) || 0;
+        if (value < max) {
+          input.value = value + 1;
+          input.dispatchEvent(new Event('change')); // optional: trigger change
+        }
+      });
+    });
+  </script>
 </html>
