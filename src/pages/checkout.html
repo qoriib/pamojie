@@ -163,7 +163,7 @@
                 <tbody>
                   <tr class="border-t border-grey-1">
                     <td class="px-4 py-3">
-                      <div class="flex flex-col justify-center items-center gap-3 bg-grey-2 border-4 border-dashed p-5 text-center rounded-2xl h-[15rem]">
+                      <div id="ktp-upload" class="flex flex-col justify-center items-center gap-3 bg-grey-2 border-4 border-dashed p-5 text-center rounded-2xl h-[15rem] cursor-pointer transition hover:bg-grey-3">
                         <i class="far fa-image text-2xl text-black"></i>
                         <p class="text-grey-1">Upload KTP untuk jaminan<br>penyewaan</p>
                       </div>
@@ -311,4 +311,12 @@
     <!-- END: Footer -->
 
   </body>
+  <script>
+    document.getElementById('ktp-upload').addEventListener('click', function() {
+      this.innerHTML = `
+        <img src="https://placehold.co/600x400?text=KTP" alt="KTP Placeholder" class="object-contain h-full">
+        <p class="text-grey-1">KTP berhasil diupload (placeholder)</p>
+      `;
+    });
+  </script>
 </html>
